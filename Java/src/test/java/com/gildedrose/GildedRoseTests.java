@@ -1,8 +1,7 @@
 package com.gildedrose;
 
+import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GildedRoseTests {
     @Test
@@ -11,8 +10,6 @@ public class GildedRoseTests {
         var gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
-        assertEquals("a common item", gildedRose.items[0].name);
-        assertEquals(-1, gildedRose.items[0].sellIn);
-        assertEquals(0, gildedRose.items[0].quality);
+        Approvals.verify(gildedRose.items[0]);
     }
 }
