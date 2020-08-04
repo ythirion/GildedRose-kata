@@ -6,15 +6,11 @@ import org.junit.jupiter.api.Test;
 public class GildedRoseTests {
     @Test
     public void updateQuality() {
-        var name = "a common item";
-        var sellIn = 0;
-        var quality = 0;
-
         CombinationApprovals.verifyAllCombinations(
                 this::callUpdateQuality,
-                new String[]{name},
-                new Integer[]{sellIn},
-                new Integer[]{quality}
+                new String[]{"a common item"},
+                new Integer[]{0},
+                new Integer[]{0}
         );
     }
 
